@@ -8,11 +8,10 @@ function displayMessage(message) {
 
 $(".number").value = Math.trunc(Math.random() * 20) + 1
 
-$(".check").addEventListener("click", (e) => {
-    e.preventDefault()
+$(".check").addEventListener("click", () => {
     const guess = Number($(".guess").value)
     const number = $(".number")
-
+    $(".guess").click()
     if (!guess) displayMessage("No number")
     if (guess !== number.value && (guess)) {
         (guess > number.value) ? displayMessage("Too high!"): displayMessage("Too low!")
