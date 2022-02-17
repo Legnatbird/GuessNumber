@@ -8,7 +8,8 @@ function displayMessage(message) {
 
 $(".number").value = Math.trunc(Math.random() * 20) + 1
 
-$(".check").addEventListener("click", () => {
+$(".check").addEventListener("click", (e) => {
+    e.preventDefault()
     const guess = Number($(".guess").value)
     const number = $(".number")
 
